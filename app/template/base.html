@@ -1,0 +1,1292 @@
+<html lang="en"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>Test</title>
+    
+
+    <!-- Le fonts -->
+<style>
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-f0b2f7c12b6b87c65c02d3c1738047ea67a7607fd767056d8a2964cc6a2393f7.eot?host=status.twilio.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-f0b2f7c12b6b87c65c02d3c1738047ea67a7607fd767056d8a2964cc6a2393f7.eot?host=status.twilio.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-e642ffe82005c6208632538a557e7f5dccb835c0303b06f17f55ccf567907241.woff?host=status.twilio.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-0f094da9b301d03292f97db5544142a16f9f2ddf50af91d44753d9310c194c5f.ttf?host=status.twilio.com') format('truetype');
+    font-weight:300;
+    font-style:normal;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-366d17769d864aa72f27defaddf591e460a1de4984bb24dacea57a9fc1d14878.eot?host=status.twilio.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-366d17769d864aa72f27defaddf591e460a1de4984bb24dacea57a9fc1d14878.eot?host=status.twilio.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-2ee4c449a9ed716f1d88207bd1094e21b69e2818b5cd36b28ad809dc1924ec54.woff?host=status.twilio.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-a40a469edbd27b65b845b8000d47445a17def8ba677f4eb836ad1808f7495173.ttf?host=status.twilio.com') format('truetype');
+    font-weight:400;
+    font-style:normal;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0bf83a850b45e4ccda15bd04691e3c47ae84fec3588363b53618bd275a98cbb7.eot?host=status.twilio.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0bf83a850b45e4ccda15bd04691e3c47ae84fec3588363b53618bd275a98cbb7.eot?host=status.twilio.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0c394ec7a111aa7928ea470ec0a67c44ebdaa0f93d1c3341abb69656cc26cbdd.woff?host=status.twilio.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-9e43859f8015a4d47d9eaf7bafe8d1e26e3298795ce1f4cdb0be0479b8a4605e.ttf?host=status.twilio.com') format('truetype');
+    font-weight:400;
+    font-style:italic;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-09566917307251d22021a3f91fc646f3e45f8d095209bcd2cded8a1979f06e54.eot?host=status.twilio.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-09566917307251d22021a3f91fc646f3e45f8d095209bcd2cded8a1979f06e54.eot?host=status.twilio.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-86724fb2152613d735ba47c3f47a9ad2424b898bea4bece213dacee40344f966.woff?host=status.twilio.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-cf3e4eb7fbdf6fb83e526cc2a0141e55b01097e6e1abfd4cbdc3eda75d183f74.ttf?host=status.twilio.com') format('truetype');
+    font-weight:500;
+    font-style:normal;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-622ea489d20e12e691663f83217105e957e2d3d09703707d40155a29c06cc9d9.eot?host=status.twilio.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-622ea489d20e12e691663f83217105e957e2d3d09703707d40155a29c06cc9d9.eot?host=status.twilio.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-c8dc577ff7f76d2fc199843e38c04bb2e9fd15889421358d966a9f846c2ed1cd.woff?host=status.twilio.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-27177fe9242acbe089276ee587feef781446667ffe9b6fdc5b7fe21ad73e12f3.ttf?host=status.twilio.com') format('truetype');
+    font-weight:700;
+    font-style:normal;
+  }
+</style>
+
+
+      <link rel="shortcut icon" type="image/x-icon" href="//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/9076/Lvl41W6wTWmcFxbqzmDa">
+
+    <link rel="shortcut icon" href="//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/9076/Lvl41W6wTWmcFxbqzmDa">
+
+    <link rel="alternate" type="application/atom+xml" href="https://status.twilio.com/history.atom" title="Twilio Status History - Atom Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://status.twilio.com/history.rss" title="Twilio Status History - RSS Feed">
+
+      <!-- Canonical Link to ensure that only the custom domain is indexed when present -->
+      <link rel="canonical" href="https://status.twilio.com/incidents/wjst4v77958r">
+
+    <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ">
+
+
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://status.twilio.com/history.atom">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" media="screen" href="https://dka575ofm4ao0.cloudfront.net/packs/0.b3ecf53b82c4b0f679f9.css">
+    <link rel="stylesheet" media="all" href="https://dka575ofm4ao0.cloudfront.net/assets/status/status_manifest-0a64868f4f9bb5640c3cfe0ed6b6624683092f36b54efd4f299c18453d9549a1.css">
+
+    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/sG0iO6gHcGdWJzjJjW9AY49S/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-+xoUonkPGEYHjXNbLWoTq/M+o6pSjtw4HyuOyq5yVumYnwysETdYuyFwwYTB7S35"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://dka575ofm4ao0.cloudfront.net/assets/jquery-3.5.1.min-729e416557a365062a8a20f0562f18aa171da57298005d392312670c706c68de.js"></script>
+
+    <script>
+      window.pageColorData = {"blue":"#3498DB","border":"#E0E0E0","body_background":"#FFFFFF","font":"#231F20","graph":"#3498DB","green":"#2FCC66","light_font":"#AAAAAA","link":"#3498DB","orange":"#E46216","red":"#E74C3C","yellow":"#A18700","no_data":"#b3bac5"};
+    </script>
+    <style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    background-color:#FFFFFF;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#FFFFFF;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#231F20;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#231F20;
+    color:rgba(35,31,32,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header .close:hover {
+    color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#E74C3C;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#E74C3C;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#E74C3C;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#E46216;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#E46216;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#E46216;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#A18700;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#A18700;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#A18700;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2FCC66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2FCC66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498DB;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498DB;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 0.8;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 0.5;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 0.3;
+  }
+</style>
+
+
+    <!-- custom css -->
+        <link rel="stylesheet" type="text/css" href="//dka575ofm4ao0.cloudfront.net/page_display_customizations-custom_css_externals/9026/external20201105-31-1mqp9a1.css">
+
+      <!-- polyfills -->
+      <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <!-- Le HTML5 shim -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- injection for static -->
+
+
+      <meta name="twitter:card" content="summary">
+  <meta name="twitter:site">
+  <meta name="twitter:creator">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://status.twilio.com/incidents/wjst4v77958r">
+  <meta property="og:image" content="https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png">
+  <meta property="og:title" content="Russian Federation SMS Carrier Maintenance - Tele2">
+  <meta property="og:description">
+
+  </head>
+
+
+  <body class="status incident status-maintenance ie" data-breakpoint-reached="false" data-new-gr-c-s-check-loaded="8.874.0" data-gr-ext-installed="" style="padding-top: 88.5833px;">
+
+    
+
+<style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    background-color:#FFFFFF;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#FFFFFF;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#231F20;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#231F20;
+    color:rgba(35,31,32,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header .close:hover {
+    color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#E74C3C;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#E74C3C;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#E74C3C;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#E46216;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#E46216;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#E46216;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#A18700;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#A18700;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#A18700;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2FCC66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2FCC66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498DB;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498DB;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 0.8;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 0.5;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 0.3;
+  }
+</style>
+
+
+<div class="layout-content status status-incident">
+    <div class="custom-header-container">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/luxon@1.23.0/build/global/luxon.min.js"></script>
+
+<script>
+  var BASE_URL = "https://gpkpyklzq55q.statuspage.io/api/v2";
+  var URL_SUFFIX = "";
+  function get_time_tz(givenTime, timeZone)
+  {
+    var dateTime = luxon.DateTime.fromISO(givenTime, {zone: 'UTC'});
+
+    if(timeZone == 'PST')
+    {
+      dateTime = dateTime.setZone('America/Los_Angeles');
+    }
+    else if(timeZone == 'CST')
+    {
+      dateTime = dateTime.setZone('America/Chicago');
+    }
+    else if(timeZone == 'ET')
+    {
+      dateTime = dateTime.setZone('America/New_York');
+    }
+
+    return dateTime.toFormat('MMM d, HH:mm');
+  }
+
+  function get_component_header_class(status,header_class)
+  {
+    if(header_class != 'red')
+    {
+      if(status=="major_outage")
+      {
+        header_class = "red";
+      }
+      else if(header_class != 'orange')
+      {
+        if(status=="partial_outage" || status=="degraded_performance")
+        {
+          header_class = "orange";
+        }
+        else if(header_class != 'green')
+        {
+          header_class = "green";
+        }
+
+      }
+    }
+    return header_class;
+  }
+  function get_incident_message(incident, message_body){
+    if (!incident || !message_body) {
+      return message_body;
+    }
+    var product_string = "";
+    incident.components.forEach((component, index) => {
+      var product_name = component.name;
+      if (index === incident.components.length - 1) {
+        product_string = product_string.concat(product_name);
+      }
+      else if (incident.components.length === 2) {
+        product_string = product_string.concat(product_name, " and ");
+      }
+      else if (index === incident.components.length - 2) {
+        product_string = product_string.concat(product_name, ", and ");
+      }
+      else {
+        product_string = product_string.concat(product_name, ", ");
+      }
+    });
+
+    if (product_string !== "") {
+      message_body = message_body + " Potentially impacted products: " + product_string + ".";
+    }
+    return message_body;
+  }
+  $(window).scroll(function(){
+    if($(window).scrollTop()>0.2){
+      $('.own-custom-header').addClass('active');
+
+    }
+    else{
+      $('.own-custom-header').removeClass('active');
+
+    }
+  })
+
+  $(window).on("load", function()
+  {
+
+    if (navigator.userAgent.search("MSIE") ) {
+      $('body').addClass('ie');
+    }
+    var headerHeight = $('.own-custom-header').height();
+    $('body').css('padding-top', headerHeight);
+
+    $.getJSON(BASE_URL + "/summary.json" + URL_SUFFIX,function(summaryData)
+    {
+      var incidentHtml;
+      var incidentUpdate;
+      var componentHtml;
+      var down_internal = 0;
+      var down_external = 0;
+      var down_servies = 0;
+      var total_incidents = 0;
+      var scheduled_count = 0;
+      var componentUl;
+      var i_components_bg_class;
+      var e_components_bg_class;
+      var dot_class;
+      var incident_header_bg_class;
+      var make_hollow_green_sms = false;
+      var make_hollow_green_mms = false;
+      var make_hollow_green_voice = false;
+      var reporting_text;
+      var external_services_group1 = "CARRIER NETWORK";
+      var external_services_group2 = "CHANNELS";
+      var asset_url = 'https://assets.twilio.com/public_assets/status-page/0.0.2/img';
+      var external_services = [
+        'SMS Long Code, North America',
+        'MMS Long Code, North America',
+        'SMS Short Code, North America',
+        'MMS Short Code, North America',
+        'SMS Toll-Free, North America',
+        'SMS, Latin America',
+        'SMS, APAC',
+        'SMS, Europe',
+        'SMS, Middle East & Africa',
+        'SMS Delivery Notifications & Status Callbacks',
+        'Voice, North America',
+        'Voice, Latin America',
+        'Voice, APAC',
+        'Voice, Europe',
+        'Voice, Middle East & Africa',
+        'Alexa',
+        'Google Assistant',
+        'Line',
+        'Messenger',
+        'WhatsApp'
+      ];
+      var e_services_with_group1a = [
+        'CARRIER NETWORK - SMS Long Code, North America',
+        'CARRIER NETWORK - SMS Short Code, North America',
+        'CARRIER NETWORK - SMS Toll-Free, North America',
+        'CARRIER NETWORK - SMS, Latin America',
+        'CARRIER NETWORK - SMS, APAC',
+        'CARRIER NETWORK - SMS, Europe',
+        'CARRIER NETWORK - SMS, Middle East & Africa',
+        'CARRIER NETWORK - SMS Delivery Notifications & Status Callbacks'
+      ];
+      var e_services_with_group1b = [
+        'CARRIER NETWORK - MMS Long Code, North America',
+        'CARRIER NETWORK - MMS Short Code, North America',
+      ];
+      var e_services_with_group1c = [
+        'CARRIER NETWORK - Voice, North America',
+        'CARRIER NETWORK - Voice, Latin America',
+        'CARRIER NETWORK - Voice, APAC',
+        'CARRIER NETWORK - Voice, Europe',
+        'CARRIER NETWORK - Voice, Middle East & Africa'
+      ];
+      var e_services_sms = [
+        'SMS Short Code, North America',
+        'SMS Long Code, North America',
+        'SMS Toll-Free, North America',
+        'SMS, Latin America',
+        'SMS, APAC',
+        'SMS, Europe',
+        'SMS, Middle East & Africa',
+        'SMS Delivery Notifications & Status Callbacks'
+      ];
+      var e_services_mms = [
+        'MMS Long Code, North America',
+        'MMS Short Code, North America'
+      ];
+      var e_services_voice = [,
+        'Voice, North America',
+        'Voice, Latin America',
+        'Voice, APAC',
+        'Voice, Europe',
+        'Voice, Middle East & Africa'
+      ];
+
+      var Months =['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+
+      //for page status
+      if(summaryData.status.indicator=="critical")
+      {
+        dot_class = "red-dot";
+      }
+      else if(summaryData.status.indicator=="major" || summaryData.status.indicator=="minor")
+      {
+        dot_class = "orange-dot";
+      }
+      else
+      {
+        dot_class = "green-dot";
+      }
+
+      total_incidents = summaryData.incidents.length;
+
+      $.each(summaryData.incidents, function( incident_index, incident_value ) {
+        if (incident_value.impact=="none" && incident_value.status=="investigating") {
+          total_incidents = total_incidents - 1;
+
+          return true;
+        }
+        var i_count = 0;
+        var e_count = 0;
+        $.each(incident_value.components, function( ic_index, ic_value ) {
+
+           var foundIndex = external_services.indexOf(ic_value.name);
+           if(foundIndex == -1)
+           {
+              i_components_bg_class = get_component_header_class(ic_value.status,i_components_bg_class);
+              if(i_count==0)
+              {
+                down_internal++;
+                i_count++;
+              }
+           }
+           else
+           {
+              e_components_bg_class = get_component_header_class(ic_value.status,e_components_bg_class);
+              if(e_count==0)
+              {
+                down_external++;
+                e_count++;
+              }
+
+              var foundIndex_sms = e_services_sms.indexOf(ic_value.name);
+              var foundIndex_mms = e_services_mms.indexOf(ic_value.name);
+              var foundIndex_voice = e_services_voice.indexOf(ic_value.name);
+              if(foundIndex_sms != -1 && !make_hollow_green_sms)
+              {
+                make_hollow_green_sms = true;
+                down_servies ++;
+              }
+              if(foundIndex_mms != -1 && !make_hollow_green_mms)
+              {
+                make_hollow_green_mms = true;
+                down_servies ++;
+              }
+              if(foundIndex_voice != -1 && !make_hollow_green_voice)
+              {
+                make_hollow_green_voice = true;
+                down_servies ++;
+              }
+           }
+        });
+      });
+
+      if(down_internal==0 && down_servies==0)
+      {
+        i_components_bg_class = "green";
+        $("#i_component_status_bar").html('All Systems Operational');
+      }
+      else if(down_internal==0 && down_servies>0)
+      {
+        i_components_bg_class = "green";
+        if(down_servies==1)
+        {
+          reporting_text = down_servies+' SERVICE';
+        }
+        else
+        {
+          reporting_text = down_servies+' SERVICES';
+        }
+        $("#i_component_status_bar").html(reporting_text+' MAY BE IMPACTED');
+      }
+      else if(down_internal>0 && down_servies>0)
+      {
+        if(down_internal==1 && down_servies==1)
+        {
+          reporting_text = down_internal+' INCIDENT, '+down_servies+' SERVICE';
+        }
+        else if(down_internal==1 && down_servies>1)
+        {
+          reporting_text = down_internal+' INCIDENT, '+down_servies+' SERVICES';
+        }
+        else if(down_internal>1 && down_servies==1)
+        {
+          reporting_text = down_internal+' INCIDENTS, '+down_servies+' SERVICE';
+        }
+        else
+        {
+          reporting_text = down_internal+' INCIDENTS, '+down_servies+' SERVICES';
+        }
+        $("#i_component_status_bar").html(reporting_text+' MAY BE IMPACTED');
+      }
+      else
+      {
+        if(down_internal==1)
+        {
+          reporting_text = down_internal+' INCIDENT';
+        }
+        else
+        {
+          reporting_text = down_internal+' INCIDENTS';
+        }
+        $("#i_component_status_bar").html(reporting_text+' REPORTED');
+      }
+
+      if(down_external==0)
+      {
+        e_components_bg_class = "green";
+        $("#e_component_status_bar").html('All Systems Operational');
+      }
+      else
+      {
+        if(down_external==1)
+        {
+          reporting_text = down_external+' INCIDENT';
+          $("#e_component_status_bar").html(reporting_text+' REPORTED');
+        }
+        else
+        {
+          reporting_text = down_external+' INCIDENTS';
+          $("#e_component_status_bar").html(reporting_text+' REPORTED');
+        }
+      }
+      $("#i_component_status_bar").addClass('bg-'+i_components_bg_class);
+      $("#e_component_status_bar").addClass('bg-'+e_components_bg_class);
+
+      if(total_incidents==0)
+      {
+        $("#page_status_bar").html('<span class="'+dot_class+'"></span>All Systems Operational');
+        //$("#status_based_txt").html('Let’s make sure everything is running smoothly.');
+        $("#status_based_txt").html('Current Information on Service Availability.');
+      }
+      else if(total_incidents==1)
+      {
+        $("#page_status_bar").html('<span class="'+dot_class+'"></span>'+total_incidents+' INCIDENT REPORTED');
+        $("#status_based_txt").html('Current Information on Service Availability.');          }
+      else
+      {
+        $("#page_status_bar").html('<span class="'+dot_class+'"></span>'+total_incidents+' INCIDENTS REPORTED');
+        $("#status_based_txt").html('Current Information on Service Availability.');
+      }
+
+      if(window.location.pathname!="/")
+      {
+        url_path = window.location.pathname;
+        if(url_path.substring(1, 10) == 'incidents')
+        {
+          incident_id = url_path.substring(11, url_path.length);
+          $.getJSON(BASE_URL + "/incidents.json" + URL_SUFFIX, function(allIncidents)
+          {
+            $.each(allIncidents.incidents, function( i_index, i_value ) {
+              var componentsArray = [];
+              var affected_component;
+              var foundIndex_sms;
+              var foundIndex_mms;
+              var foundIndex_voice;
+              var affected_class;
+              if(i_value.id == incident_id)
+              {
+                $(".components-affected").html('<div class="components-affected-wrapper"><span \ class="color-light-grey font-14">This incident affected: </span></div>');
+                if (i_value.impact === "none" && i_value.status === "investigating")  {
+                  i_value.components.forEach((component, index) => {
+                    $(".components-affected-wrapper").append('<span>'+component.name+'</span>');
+                  });
+                }
+                $.each(i_value.incident_updates, function( iu_index, iu_value ) {
+                  if (iu_value.affected_components !== null) {
+                    $.each(iu_value.affected_components, function( ac_index, ac_value ) {
+                      if(ac_value.new_status != 'operational' && !componentsArray.includes(ac_value.name))
+                      {
+                        if(ac_value.new_status=='major_outage')
+                        {
+                          affected_class="red-dot-own";
+                        }
+                        else if(ac_value.new_status=='partial_outage' || ac_value.new_status=='degraded_performance')
+                        {
+                          affected_class="orange-dot-own";
+                        }
+                        else if(ac_value.new_status=='under_maintenance')
+                        {
+                          affected_class="yellow-dot-own";
+                        }
+                        else
+                        {
+                          affected_class="green-dot-own";
+                        }
+                        comp_name=ac_value.name.substring(ac_value.name.indexOf("-") + 1);
+                        $(".components-affected-wrapper").append('<span class="'+affected_class+' dot-before font-15 color-blue">'+comp_name+'</span>');
+                        componentsArray.push(ac_value.name);
+                        affected_component = ac_value.name;
+                        foundIndex_sms = e_services_with_group1a.indexOf(affected_component);
+                        foundIndex_mms = e_services_with_group1b.indexOf(affected_component);
+                        foundIndex_voice = e_services_with_group1c.indexOf(affected_component);
+                        if(foundIndex_sms != -1 && !componentsArray.includes("SMS"))
+                        {
+                          $(".components-affected-wrapper").append('<span class="dot-before green-outline-dot-own font-15 color-blue">SMS</span>');
+                          componentsArray.push("SMS");
+                        }
+                        else if(foundIndex_mms != -1 && !componentsArray.includes("MMS"))
+                        {
+                          $(".components-affected-wrapper").append('<span class="dot-before green-outline-dot-own font-15 color-blue">MMS</span>');
+                          componentsArray.push("MMS");
+                        }
+                        else if(foundIndex_voice != -1 && !componentsArray.includes("PSTN"))
+                        {
+                          $(".components-affected-wrapper").append('<span class="dot-before green-outline-dot-own font-15 color-blue">PSTN</span>');
+                          componentsArray.push("PSTN");
+                        }
+                      }
+                    });
+                  }
+                });
+              }
+            });
+
+          });
+        }
+
+        // $("#theStatus").append('<div class="divider-own col-12"></div>');
+        setTimeout(function() {
+          $('.loader-wrapper').fadeOut();
+        }, 500);
+
+        $("#theStatus").hide();
+        $(".main-page").hide();
+        $("#above_footer").hide();
+
+
+
+      }
+      else{
+        summaryData.scheduled_maintenances = $.grep(summaryData.scheduled_maintenances, function( sm_value, sm_index ) {
+          if(sm_value.status=="in_progress")
+          {
+            summaryData.incidents.push(sm_value);
+            return false;
+          }
+          return true;
+        });
+
+        // for incidents
+        $.each(summaryData.incidents, function( index, value ) {
+
+          if(value.impact=="critical")
+          {
+            incident_header_bg_class = "bg-red";
+          }
+          else if(value.impact=="major" || value.impact=="minor")
+          {
+            incident_header_bg_class = "bg-orange";
+          }
+          else if(value.impact=="maintenance")
+          {
+            incident_header_bg_class = "bg-blue";
+          }
+          else
+          {
+            incident_header_bg_class = "bg-green";
+          }
+
+          incidentHtml='<div class="col-md-12 class-to-catch"> \
+              <div class="box-wrapper"> \
+                <div class="box-heading '+incident_header_bg_class+' color-white-own py-3 px-4"> \
+                  <div class="d-flex flex-wrap align-items-center"> \
+                    <div class="flex-one"><a class="color-white-own" href="/incidents/'+value.id+'">'+value.name+'</a></div> \
+                  <div class="small-btn-wrapper" id="services_'+value.id+'"> \
+                  </div> \
+                </div> \
+              </div> \
+              <ul class="list-unstyled status-list p-4" id="'+value.id+'"></ul> \
+              </div> \
+            </div>';
+          if(value.impact=="maintenance")
+          {
+            $("#maintenance_incident").append(incidentHtml);
+          }
+          else if(value.impact=="critical")
+          {
+            $("#red_incident_container").append(incidentHtml);
+          }
+          else if(value.impact=="none" && value.status=="investigating")
+          {
+            var message_body = get_incident_message(value, value.incident_updates[0].body);
+            incidentHtml = '<div class="alert-box col-md-12 class-to-catch">' + '<div class="info-icon"><svg width="16px" height="16px" viewBox="0 0 16 16" <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="final" transform="translate(-216.000000, -363.000000)" fill="#282A2B"><g id="Interface-/-WarningIcon" transform="translate(224.000000, 371.000000) scale(-1, 1) rotate(-360.000000) translate(-224.000000, -371.000000) translate(212.000000, 359.000000)"><path d="M12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z M12,14.6666667 C11.2636203,14.6666667 10.6666667,15.2636203 10.6666667,16 C10.6666667,16.7363797 11.2636203,17.3333333 12,17.3333333 C12.7363797,17.3333333 13.3333333,16.7363797 13.3333333,16 C13.3333333,15.2636203 12.7363797,14.6666667 12,14.6666667 Z M13,7 L11,7 L11,13 L13,13 L13,7 Z" id="WarningIcon"></path></g></g></g></svg></div>' + '<div class="alert-text">' + message_body + ' ' + get_time_tz(value.updated_at, 'PST') + ' PST </div></div>';
+
+            $("#green_alerted_container").append(incidentHtml);
+          }
+          else
+          {
+            $("#orange_incident_container").append(incidentHtml);
+          }
+
+          $.each(value.incident_updates, function( iu_index, iu_value ) {
+            var iu_status = iu_value.status.replace(/_/g, ' ');
+            incidentUpdate ='<li> \
+              <div class="status-details"> \
+                <b>'+iu_status+'</b> \
+                <span> - '+iu_value.body+'</span> \
+              </div> \
+              <div class="status-upload-date text-uppercase"> \
+                Posted: '+get_time_tz(iu_value.display_at, "PST")+' PST \
+              </div> \
+            </li>';
+            $('#'+iu_value.incident_id).append(incidentUpdate);
+          });
+
+          if (value.incident_updates[0] && value.incident_updates[0].affected_components) {
+            $.each(value.incident_updates[0].affected_components, function( iuac_index, iuac_value ) {
+              var affected_service = iuac_value.name.substring(iuac_value.name.indexOf("-") + 1);
+              incidentUpdate_ac ='<div class="btn btn-transparent text-uppercase">'+affected_service+'</div>';
+              $('#services_'+value.id).append(incidentUpdate_ac);
+            });
+          }
+        });
+
+        var containers = [
+            "#red_incident_container",
+            "#orange_incident_container",
+            "#maintenance_incident",
+            "#green_alerted_container",
+        ];
+        var children = $(containers.join(",")).map( function() {
+            return $(this).children().length;
+        });
+        var totalNumChildren = children.get().reduce(function (total, count) { return total+count; });
+
+        if(totalNumChildren === 0)
+        {
+          $("#component_top_hr").hide();
+        }
+        else
+        {
+          $("#above_footer").hide();
+        }
+
+        //for components
+        $.each(summaryData.components, function( componentsIndex, componentsValue ) {
+          if(componentsValue.group==true || (componentsValue.group==false && componentsValue.group_id==null))
+          {
+
+            if(componentsValue.status=="major_outage")
+            {
+              dot_class = "red-dot-own";
+            }
+            else if(componentsValue.status=="partial_outage" || componentsValue.status=="degraded_performance")
+            {
+              dot_class = "orange-dot-own";
+            }
+            else if(componentsValue.status=="under_maintenance")
+            {
+              dot_class = "blue-dot-own";
+            }
+            else
+            {
+              dot_class = "green-dot-own";
+            }
+
+            if(componentsValue.name != external_services_group1 && componentsValue.name != external_services_group2)
+            {
+              componentHtml='<li class=""><div class="green-dot-own '+dot_class+' dot-before outer-box-heading text-uppercase"> '+componentsValue.name+'</div></li>';
+
+              $("#twilio_components").append(componentHtml);
+              if(componentsValue.components){
+                componentUl='<ul class="list-unstyled pl-4 inner-box-dot-wrapper pb-2 pt-3" id="'+componentsValue.id+'"></ul>';
+
+                $("#twilio_components li:last-child").append(componentUl)
+              }
+            }
+            else
+            {
+              componentHtml='<li class=""><div class="green-dot-own '+dot_class+' dot-before outer-box-heading text-uppercase">'+componentsValue.name+'</div></li>';
+
+              $("#external_components").append(componentHtml);
+              if(componentsValue.components){
+                componentUl='<ul class="list-unstyled pl-4 inner-box-dot-wrapper pb-2 pt-3" id="'+componentsValue.id+'"></ul>';
+
+                $("#external_components li:last-child").append(componentUl)
+              }
+            }
+          }
+        });
+        $.each(summaryData.components, function( componentsIndex, componentsValue ) {
+          if(componentsValue.group==false)
+          {
+            if(componentsValue.status=="operational")
+            {
+              if(make_hollow_green_sms && componentsValue.name=="SMS")
+              {
+                dot_class = "green-outline-dot-own";
+              }
+              else if(make_hollow_green_mms && componentsValue.name=="MMS")
+              {
+                dot_class = "green-outline-dot-own";
+              }
+              else if(make_hollow_green_voice && componentsValue.name=="PSTN")
+              {
+                dot_class = "green-outline-dot-own";
+              }
+              else
+              {
+                dot_class = "green-dot-own";
+              }
+            }
+            else if(componentsValue.status=="partial_outage" || componentsValue.status=="degraded_performance")
+            {
+              dot_class = "orange-dot-own";
+            }
+            else if(componentsValue.status=="under_maintenance")
+            {
+              dot_class = "blue-dot-own";
+            }
+            else
+            {
+              dot_class = "red-dot-own";
+            }
+
+            componentHtml ='<li class="dot-before '+dot_class+'"> '+componentsValue.name+' <span class="color-yellow" id="'+componentsValue.id+'"> </span></li>';
+            $("#"+componentsValue.group_id).append(componentHtml);
+
+
+            if(dot_class == "green-outline-dot-own")
+            {
+              $("#"+componentsValue.id).append('&nbsp;&nbsp;<img src="'+asset_url+'/lightning.png" width="15"> May be impacted by a connectivity issue');
+            }
+          }
+        });
+
+
+</script>
+
+{% block body %}
+{% endblock %}
+</body></html>

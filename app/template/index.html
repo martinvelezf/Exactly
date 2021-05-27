@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    {% for i in incident %}
+        <div class="month">
+        <h4 class="month-title font-largest border-color">
+            {{i.start_date}}
+        </h4>
+        <div class="month-content">
+        <div class="incident-history">
+        <div class="incident-list">
+        <div class="incident-data incident-container">
+        <a href="{% url 'update' id_inc=i.id %}" class="impact-minor incident-title font-large">
+        {{i.title}}
+        </a>
+        <div class="message incident-body color-primary">
+        {{i.description}}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div class="row ">
+      <div class="col-12  py-3 bg-gray">
+        <div class="incidents-count d-flex flex-wrap text-uppercase flex-one text-center">
+          <div class="flex-one text-center" id="page_status_bar">          
+          {% if incident.status == 'open' %}
+            <span class="red-dot">
+          {% else %}
+           <span class="green-dot">
+          {% endif %}
+          </span>{{incident.start_date}}
+          {% if incident.end_date %}
+            to {{incident.end_date}}
+          {% endif %}
+          <small>({{incident.status}})</small></div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="page-title">
+      <div class="color-primary incident-name impact-minor">{{incident.title}}</div>
+        <div class="font-largest color-secondary subheader ">
+          {{incident.description}}
+        </div>
+    </div>
+    {{incident}}
+        <div class="month">
+        <h4 class="month-title font-largest border-color">
+            {{incident.start_date}}
+        </h4>
+
+        
+    {% for u in incident.update.all %}
+
+
+    <div class="incident-updates-container">
+      <!-- postmortem if it's published -->
+
+      <!-- incident updates in reverse order -->
+        <div class="row update-row">
+          <div class="update-title span3 font-large">
+            {{u.type}}
+            
+          </div>
+          <div class="update-container span9">
+            <div class="update-body font-regular">
+              {{u.content}}
+            </div>
+            <div class="update-timestamp font-small color-secondary">
+              Posted {{u.date}} PDT
+            </div>
+          </div>
+        </div>
+
+
+         {% endfor %}
+</div>
+{% endblock %}
