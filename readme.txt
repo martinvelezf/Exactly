@@ -12,6 +12,7 @@ if you dont have sqlite you can use on linux
 To start the app
 Run 
 >>pipenv install
+>>pipenv run python manage.py migrate
 >>pipenv run python manage.py runserver
 
 Test url
